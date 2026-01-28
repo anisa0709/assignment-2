@@ -1,0 +1,40 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* shared style */
+.font-open-sans {
+  font-family: "Work Sans", sans-serif;
+  
+}
+.logo h1{
+  font-size: 35px;
+}
+.color-Linear{
+ background: linear-gradient(
+rgba(247, 233, 63, 1),
+rgba(251, 9, 180, 1),
+rgba(145, 0, 248, 1));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* main style */
+header{
+  background-color: #412567;
+  padding-top: 30px;
+}
+nav{
+  width: 71%;
+  max-width: 1140px;
+  border: 1px solid rgb(95, 18, 18);
+  margin: 0px auto;
+  margin-left: auto;
+  display: flex;
+ justify-content: space-between;
+}
