@@ -1,7 +1,7 @@
 *{
   margin:0;
   padding: 0;
-  box-sizing: border-box;
+  
 }
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -12,6 +12,8 @@
 }
 .logo h1{
   font-size: 35px;
+  
+
 }
 .color-Linear{
  background: linear-gradient(
@@ -22,19 +24,79 @@ rgba(145, 0, 248, 1));
             background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.btn {
+border-radius: 10000px;
+background: var(--Linear, linear-gradient(47.64deg, rgba(247, 233, 63, 1),rgba(251, 9, 180, 1),rgba(145, 0, 248, 1)));
+padding: 12px 22px;
+color: #FFFFFF;
+font-size: 20px;
+font-weight: bold;
+
+}
+
 
 
 /* main style */
 header{
   background-color: #412567;
   padding-top: 30px;
+  
 }
+
+
 nav{
   width: 71%;
   max-width: 1140px;
-  border: 1px solid rgb(95, 18, 18);
+  
   margin: 0px auto;
   margin-left: auto;
   display: flex;
  justify-content: space-between;
+ align-items: center;
+}
+
+nav .menu {
+  display: flex;
+  list-style-type:none;
+  gap: 90px;
+  align-items: center;
+}
+nav .menu a{
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#banner{
+  border:2px solid rgba(42, 24, 108, 1);;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  background :   url("../assets/microphone.png"),url("../assets/hero-circle.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#banner .banner-content h2{
+  font-size: 45px;
+ color:rgba(255 ,255,255,1);
+font-style: Extra Bold;
+text-align: center;
+font-size: 60px;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+}
+#banner .banner-content p{
+
+color: rgb(253, 248, 248);
+font-size: 16px;
+font-weight: 400;
+line-height: 19px;
+flex-direction: column;
+text-align: center;
+
+}
+main{
+  background:  url("../assets/hero-bg.png");
+  width: 1626px;
+  height: 688px;
 }
