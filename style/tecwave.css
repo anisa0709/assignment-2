@@ -227,4 +227,35 @@ background: rgb(30, 3, 66);
   font-size: 16px;
   color: var(--#FFFFFF, rgba(255, 255, 255, 1));
 }
+.host-image{
+  display: flex;
+  gap: 20px;
+}
+.footer{
+  background-image: url("../assets/footer-bg.png");
+ padding: 80px 30px;
+ text-align: center;
+ position: relative;
+ overflow: hidden;
+}  
+.footer-content h1{
+  color: #eeecec;
+  font-size: 40px;
+}
+.copyright{
+  font-size: 12px;
+  color: rgba(112, 112, 112, 0.863);
+  align-content: center;
+
+}
+.social-links a {
+  color: #d3d0d0;
+  gap: 35px;
+  margin-bottom: 20px;
+ margin: 0px auto;
+  margin-left: auto;
+ 
+  justify-content: space-between;
+  align-items: center;
   
+}
