@@ -40,7 +40,7 @@
 
 
 /* main style */
-header {
+ header {
   background-color: #412567;
   padding-top: 30px;
 
@@ -49,7 +49,7 @@ header {
 
 nav {
   width: 71%;
-  max-width: 1140px;
+  max-width: 1480px;
 
   margin: 0px auto;
   margin-left: auto;
@@ -80,6 +80,7 @@ nav .menu a {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: 500px;
 
 }
 
@@ -111,60 +112,160 @@ nav .menu a {
 
 .mic {
   position: absolute;
-  top: 80px;
-  left: 120px;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
 
 }
+.circle{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 576px) {
+  /* Header & Nav */
+  nav {
+    width: 100%;
+    padding: 0 16px;
+  }
 
-.skills {
-  padding: 120px 200px 120px 200px;
-  background-color: #412567;
+  nav .menu {
+    display: flex; 
+  }
+
+  .logo h1 {
+    font-size: 26px;
+  }
+
+  /* Banner */
+  #banner {
+    padding: 60px 16px;
+  }
+
+  #banner .banner-content h2 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  #banner .banner-content p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 10px 18px;
+  }
+
+  /* Images */
+  .banner-image {
+    width: 100%;
+    text-align: center;
+  }
+
+  .mic {
+    position: static;
+    margin-top: 20px;
+    max-width: 100px;
+  }
 }
 
-.skill-container h2 {
+
+
+
+.why-techwave {
+  background: linear-gradient(180deg, #12092a, #1b0f3f);
+  padding: 80px 20px;
+  color: #ffffff;
+}
+
+.section-title {
   text-align: center;
-  font-size: 48px;
+  font-size: 40px;
   margin-bottom: 60px;
-  background-color: #412567;
-  color: aliceblue;
-
 }
 
-
-
-
-.skill-card {
-  background-color: #412567;
-}
-
-#sidebar {
-  grid-row: span 3;
-}
-
-.container {
+/* Grid */
+.features {
+  max-width: 1100px;
+  margin: auto;
   display: grid;
-  gap: 30px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 150px)50px 50px;
-  border-radius: 40px;
+  gap: 30px;
+}
 
+/* Cards */
+.feature-card {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 110, 199, 0.3);
+  
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  
+}
+
+.image {
+  font-size: 36px;
+  display: inline-block;
+  margin-bottom: 15px;
 }
 
 
-
-.container h3 {
-  font-size: 24px;
-  color: #FFFFFF;
-  font-style: bold;
-  text-align: left;
+.feature-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
-.container p {
-  font-size: 16px;
-  color: #666464;
-  text-align: left;
-
+.feature-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d0d0d0;
 }
+
+@media (max-width: 576px) {
+  .features {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .why-techwave {
+    padding: 50px 16px;
+  }
+
+  .section-title {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .feature-card {
+    
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .feature-card h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .feature-card p {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .image {
+    display: block;
+    text-align: center;
+    font-size: 32px;
+  }
+}
+
 
 .video-box {
   background-color: #2f105a;
@@ -177,15 +278,18 @@ nav .menu a {
 
 .video-container iframe {
   border-radius: 24px 24px 0px 0px;
+  width: 100%;
+  height: 215;
 }
 
 .vedios {
  background: rgba(26, 11, 46, 1);
  display: flex;
-  gap:10px;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 120px 200px 120px 200px;
+  gap:20px;
+  justify-content: start;
+  align-items: flex-start;
+  padding: 120px, 200px, 120px, 200px;
+  
 }
 
 .video-container h2 {
@@ -196,6 +300,33 @@ nav .menu a {
   font-size: 16PX;
   color: rgb(144, 163, 163);
 }
+@media (max-width: 576px) {
+  .vedios {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+
+  .video-container iframe {
+    height: 220px;
+  }
+
+  .video-container h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .video-container p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .video-box h1 {
+    font-size: 24px;
+  }
+}
+
+
+
 .host{
   background-color: rgba(26, 11, 46, 1);
   padding: 40px;
@@ -204,10 +335,10 @@ nav .menu a {
 .meet {
 background: rgb(30, 3, 66);
  display: flex;
-  gap:10px;
+  gap:20px;
   justify-content: flex-start;
   align-items: center;
-  padding: 120px 200px 120px 200px;
+  padding: 120px 24px 120px 24px;
   border-radius: 20px;
   
   
@@ -231,6 +362,37 @@ background: rgb(30, 3, 66);
   display: flex;
   gap: 20px;
 }
+
+@media (max-width: 576px) {
+  .meet {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .host-image {
+    justify-content: center;
+  }
+
+  .name {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .para {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .host h1 {
+    font-size: 26px;
+  }
+}
+
+
+
+
+
 .footer{
   background-image: url("../assets/footer-bg.png");
  padding: 80px 30px;
@@ -259,3 +421,74 @@ background: rgb(30, 3, 66);
   align-items: center;
   
 }
+.about {
+  background: linear-gradient(180deg, #140b2d, #1c0f3f);
+  padding: 80px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+/* About box */
+.about-box {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 16px;
+  border: 1px solid rgba(79, 195, 247, 0.3);
+  
+}
+
+.about-box h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-box p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #dcdcdc;
+}
+
+
+.stats {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.stat {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 25px;
+  
+ 
+}
+
+.stat h3 {
+  font-size: 32px;
+  color: #00ffae;
+  margin-bottom: 8px;
+}
+
+.stat span {
+  font-size: 14px;
+  color: #bbbbbb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+.vedios
+
+}
+
